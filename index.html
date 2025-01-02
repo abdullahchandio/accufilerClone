@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Setup</title>
+    <link rel="stylesheet" href="./dist/tailwind.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+     <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  rel="stylesheet"
+/>
+
+    <style>
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+      .cat-section{
+        margin-bottom: -50px;
+    position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="bg-white py-4 px-6 fixed w-full top-0 z-50 shadow-sm">
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <!-- Logo -->
+        <a href="/" class="flex items-center">
+          <img
+            src="https://framerusercontent.com/images/ELqC4kqk682P3L6kVlYWdtrF4.png"
+            alt="Accufiler Logo"
+            class="h-10 w-auto"
+          />
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="/" class="text-gray-700 hover:text-gray-900">Home</a>
+          <div class="relative dropdown">
+            <button class="flex items-center text-gray-700 hover:text-gray-900">
+              All Services
+              <svg
+                class="ml-1 h-4 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Services Dropdown -->
+            <div
+              class="absolute top-full left-0 mt-2 bg-[#15171A] text-white rounded-lg shadow-xl p-6 w-[800px] hidden dropdown-menu"
+            >
+              <div class="grid grid-cols-3 gap-4">
+                <a
+                  href="#"
+                  class="hover:bg-gray-800 p-3 rounded-lg transition-colors"
+                >
+                  <div class="font-medium">Registered Agent</div>
+                </a>
+                <a
+                  href="#"
+                  class="hover:bg-gray-800 p-3 rounded-lg transition-colors"
+                >
+                  <div class="font-medium">Get Reseller Certificate</div>
+                </a>
+                <a
+                  href="#"
+                  class="hover:bg-gray-800 p-3 rounded-lg transition-colors"
+                >
+                  <div class="font-medium">Operating Agreements</div>
+                </a>
+                <a
+                  href="#"
+                  class="hover:bg-gray-800 p-3 rounded-lg transition-colors"
+                >
+                  <div class="font-medium">Get Unique Business Address</div>
+                </a>
+                <a
+                  href="#"
+                  class="hover:bg-gray-800 p-3 rounded-lg transition-colors"
+                >
+                  <div class="font-medium">Trademark, Logo</div>
+                </a>
+                <a
+                  href="#"
+                  class="hover:bg-gray-800 p-3 rounded-lg transition-colors"
+                >
+                  <div class="font-medium">
+                    BOI (Beneficial Ownership Report)
+                  </div>
+                </a>
+                <a
+                  href="#"
+                  class="hover:bg-gray-800 p-3 rounded-lg transition-colors"
+                >
+                  <div class="font-medium">Register a Company</div>
+                </a>
+                <a
+                  href="#"
+                  class="hover:bg-gray-800 p-3 rounded-lg transition-colors"
+                >
+                  <div class="font-medium">File Annual Taxes</div>
+                </a>
+                <a
+                  href="#"
+                  class="hover:bg-gray-800 p-3 rounded-lg transition-colors"
+                >
+                  <div class="font-medium">Website domain</div>
+                </a>
+                <a
+                  href="#"
+                  class="hover:bg-gray-800 p-3 rounded-lg transition-colors"
+                >
+                  <div class="font-medium">File an Amendment</div>
+                </a>
+                <a
+                  href="#"
+                  class="hover:bg-gray-800 p-3 rounded-lg transition-colors"
+                >
+                  <div class="font-medium">Open Business Bank Account</div>
+                </a>
+                <a
+                  href="#"
+                  class="hover:bg-gray-800 p-3 rounded-lg transition-colors"
+                >
+                  <div class="font-medium">EIN Registration</div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a href="/pricing" class="text-gray-700 hover:text-gray-900"
+            >Pricing</a
+          >
+          <a href="/blog" class="text-gray-700 hover:text-gray-900">Blog</a>
+          <a href="/contact" class="text-gray-700 hover:text-gray-900"
+            >Contact</a
+          >
+          <a
+            href="#"
+            class="bg-[#0B4B2C] hover:bg-[#083921] text-white px-6 py-2 rounded-lg"
+          >
+            Start Your Business
+          </a>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Dropdown -->
+      <div
+        class="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg hidden"
+      >
+        <div class="px-4 py-2 space-y-2">
+          <a href="/" class="block py-2">Home</a>
+          <a href="#" class="block py-2">All Services</a>
+          <a href="/pricing" class="block py-2">Pricing</a>
+          <a href="/blog" class="block py-2">Blog</a>
+          <a href="/contact" class="block py-2">Contact</a>
+          <a
+            href="#"
+            class="block w-full bg-[#0B4B2C] hover:bg-[#083921] text-white text-center py-2 rounded-lg"
+          >
+            Start Your Business
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen pt-24 overflow-hidden">
+      <!-- Background Grid -->
+      <div
+        class="absolute inset-0 bg-cover bg-center"
+        style="
+          background-image: url('https://framerusercontent.com/images/mvFRSviDmjb2ubFMq8tAAWsF6Y.png?scale-down-to=2048');
+        "
+      ></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Left Column - Content -->
+          <div class="space-y-8 max-w-2xl">
+            <h1
+              class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-800"
+            >
+              Start Your Business with
+              <span class="block">Ease and Confidence.</span>
+            </h1>
+            <p
+              class="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-lg"
+            >
+              From formation to compliance, we simplify the process so you can
+              focus on growing your dream. Trusted by thousands of
+              entrepreneurs.
+            </p>
+            <button
+              class="flex items-center bg-[#0B4B2C] hover:bg-[#083921] text-white py-3 px-6 rounded-full text-lg"
+            >
+              Get Started Today
+              <svg
+                class="ml-2 h-5 w-5"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Right Column - Image and Cards -->
+          <div class="relative h-[600px]">
+            <!-- Background Rectangle -->
+            <div
+              class="absolute right-0 top-0 w-[90%] h-[600px] bg-[#FFE4CC] rounded-3xl overflow-hidden"
+            >
+              <img
+                src="https://framerusercontent.com/images/IZ6JJs7h40sGuqbBlfEY44vHgWM.png"
+                alt="Business Professional"
+                class="object-cover w-full h-full"
+              />
+            </div>
+
+            <!-- Floating Elements -->
+            <div class="absolute -left-16 top-1/4">
+              <div class="bg-white rounded-2xl shadow-lg p-6 w-[280px]">
+                <h3 class="text-lg font-semibold mb-4">Recent Records</h3>
+                <div class="space-y-4">
+                  <div class="flex items-center space-x-3">
+                    <div class="bg-[#FFF5E9] p-2 rounded-full">
+                      <svg
+                        class="h-5 w-5 text-[#FF8A00]"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M3 12h18M12 3v18"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <p class="text-sm text-gray-600">LLC Fee Paid</p>
+                      <p class="font-semibold">$17,223</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="bg-[#EDF6FF] p-2 rounded-full">
+                      <svg
+                        class="h-5 w-5 text-[#0066FF]"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M3 12h18M12 3v18"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <p class="text-sm text-gray-600">EIN Filed</p>
+                      <p class="font-semibold">$4,200</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="absolute -right-4 -top-4">
+              <div class="bg-white rounded-2xl p-4 shadow-lg">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-sm font-medium">Dec' 24</span>
+                  <span
+                    class="text-sm text-gray-500 hover:text-gray-700 cursor-pointer"
+                    >See All</span
+                  >
+                </div>
+                <div class="relative w-16 h-16">
+                  <svg
+                    class="w-full h-full transform -rotate-90"
+                    viewBox="0 0 36 36"
+                  >
+                    <circle
+                      cx="18"
+                      cy="18"
+                      r="16"
+                      fill="none"
+                      stroke="#E5E7EB"
+                      strokeWidth="2"
+                    />
+                    <circle
+                      cx="18"
+                      cy="18"
+                      r="16"
+                      fill="none"
+                      stroke="#0B4B2C"
+                      strokeWidth="2"
+                      strokeDasharray="100"
+                      strokeDashoffset="52"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                  <div
+                    class="absolute inset-0 flex items-center justify-center"
+                  >
+                    <span class="text-lg font-medium">48%</span>
+                  </div>
+                </div>
+                <p class="text-xs text-gray-500 mt-2">Filing Steps</p>
+              </div>
+            </div>
+
+            <div class="absolute bottom-8 right-8">
+              <div class="bg-white rounded-xl shadow-lg p-4">
+                <div class="flex items-center space-x-3">
+                  <div class="bg-[#0B4B2C] p-2 rounded-full">
+                    <svg
+                      class="h-6 w-6 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M3 12h18M12 3v18"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-sm font-medium text-gray-600">
+                      30 Day Filings
+                    </p>
+                    <p class="text-lg font-bold">$25,980.0</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section -->
+    <section class="max-w-7xl mx-auto px-4 py-16">
+      <h1 class="text-4xl md:text-5xl font-bold text-black mb-12 max-w-2xl">
+        Top Services to Start Your Business
+      </h1>
+
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+        <!-- Registered Agent Card -->
+        <div class="bg-white rounded-3xl p-8 shadow-sm border">
+          <h3 class="text-2xl font-bold text-[#004d2f] mb-6">
+            Registered Agent / <span class="text-black">$20</span>
+          </h3>
+          <p class="text-gray-600 mb-8 min-h-[120px]">
+            Stay compliant with state requirements by appointing a trusted
+            registered agent to handle official correspondence and legal notices
+            for your LLC.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button
+              class="px-6 py-3 bg-[#004d2f] text-white rounded-full hover:bg-[#003d26] transition-colors"
+            >
+              Apply Now
+            </button>
+            <button
+              class="px-6 py-3 bg-[#d1ff96] text-black rounded-full hover:bg-[#c1ef86] transition-colors"
+            >
+              Read More
+            </button>
+          </div>
+        </div>
+
+        <!-- Business Address Card -->
+        <div class="bg-[#004d2f] rounded-3xl p-8 text-white shadow-sm">
+          <h3 class="text-2xl font-bold mb-6">
+            Business Address / <span>$50</span>
+          </h3>
+          <p class="mb-8 min-h-[120px]">
+            Boost your business's credibility with a professional address.
+            Maintain privacy while establishing a reliable point of contact for
+            your LLC.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button
+              class="px-6 py-3 bg-white text-[#004d2f] rounded-full hover:bg-gray-100 transition-colors"
+            >
+              Apply Now
+            </button>
+            <button
+              class="px-6 py-3 bg-[#d1ff96] text-black rounded-full hover:bg-[#c1ef86] transition-colors"
+            >
+              Read More
+            </button>
+          </div>
+        </div>
+
+        <!-- EIN Registration Card -->
+        <div class="bg-white rounded-3xl p-8 shadow-sm border">
+          <h3 class="text-2xl font-bold text-[#004d2f] mb-6">
+            EIN Registration / <span class="text-black">$25</span>
+          </h3>
+          <p class="text-gray-600 mb-8 min-h-[120px]">
+            Easily set up a business bank account to manage your finances
+            effectively and separate personal and business transactions.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button
+              class="px-6 py-3 bg-[#004d2f] text-white rounded-full hover:bg-[#003d26] transition-colors"
+            >
+              Apply Now
+            </button>
+            <button
+              class="px-6 py-3 bg-[#d1ff96] text-black rounded-full hover:bg-[#c1ef86] transition-colors"
+            >
+              Read More
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center">
+        <button
+          class="px-8 py-4 bg-[#004d2f] text-white rounded-full hover:bg-[#003d26] transition-colors flex items-center gap-2"
+        >
+          View All Services
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </button>
+      </div>
+    </section>
+    <!-- silder - section  -->
+    <section class="max-w-7xl mx-auto px-4 py-16">
+      <div class="flex justify-between items-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold max-w-2xl">
+          Essential Features for Business Formation Success
+        </h2>
+        <div class="flex gap-2">
+          <button class="swiper-prev-button p-5 rounded-full bg-[#004d2f] text-white hover:bg-[#003d26]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button class="swiper-next-button p-5 rounded-full bg-[#004d2f] text-white hover:bg-[#003d26]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <!-- Slide Template -->
+          <div class="swiper-slide flex flex-col md:flex-row gap-8 items-center bg-[#d1ff96] rounded-3xl p-8" style="height: 568px;">
+            <div class="flex flex-col md:flex-row gap-8 w-full items-center h-full">
+              <!-- Content -->
+              <div class="content md:w-1/2">
+                <h3 class="text-3xl font-bold mb-4">Client Personal Dashboard</h3>
+                <p class="text-gray-700 mb-8">
+                  Your business formation process made simple and transparent. Our user-friendly dashboard keeps you in control every step of the way.
+                </p>
+                <ul class="space-y-4">
+                  <li class="flex gap-2 items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#004d2f]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Track the real-time status of your order with daily updates.</span>
+                  </li>
+                  <li class="flex gap-2 items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#004d2f]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Access a clear breakdown of your service fees for full transparency.</span>
+                  </li>
+                  <li class="flex gap-2 items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#004d2f]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Customize your service package to fit your unique business needs.</span>
+                  </li>
+                </ul>
+              </div>
+              <!-- Image -->
+              <div class="image md:w-1/2 flex justify-center items-center">
+                <img src="./Assets/Silder_img1.png" alt="Client Dashboard" class="rounded-xl  object-contain">
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide flex flex-col md:flex-row gap-8 items-center bg-[#d1ff96] rounded-3xl p-8" style="height: 568px;">
+            <div class="flex flex-col md:flex-row gap-8 w-full items-center h-full">
+              <!-- Content -->
+              <div class="content md:w-1/2">
+                <h3 class="text-3xl font-bold mb-4">Client Personal Dashboard</h3>
+                <p class="text-gray-700 mb-8">
+                  Your business formation process made simple and transparent. Our user-friendly dashboard keeps you in control every step of the way.
+                </p>
+                <ul class="space-y-4">
+                  <li class="flex gap-2 items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#004d2f]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Track the real-time status of your order with daily updates.</span>
+                  </li>
+                  <li class="flex gap-2 items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#004d2f]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Access a clear breakdown of your service fees for full transparency.</span>
+                  </li>
+                  <li class="flex gap-2 items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#004d2f]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Customize your service package to fit your unique business needs.</span>
+                  </li>
+                </ul>
+              </div>
+              <!-- Image -->
+              <div class="image md:w-1/2 flex justify-center items-center">
+                <img src="https://framerusercontent.com/images/TNJUMO1Q0SJoTiyDXgcTQnAsWS4.jpg?scale-down-to=1024" alt="Client Dashboard" class="rounded-xl w-full h-full object-contain">
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide flex flex-col md:flex-row gap-8 items-center bg-gray-100 rounded-3xl p-8" style="height: 568px;">
+            <div class="flex flex-col md:flex-row gap-8 w-full items-center h-full">
+              <!-- Content -->
+              <div class="content md:w-1/2">
+                <h3 class="text-3xl font-bold mb-4">Client Personal Dashboard</h3>
+                <p class="text-gray-700 mb-8">
+                  Your business formation process made simple and transparent. Our user-friendly dashboard keeps you in control every step of the way.
+                </p>
+                <ul class="space-y-4">
+                  <li class="flex gap-2 items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#004d2f]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Track the real-time status of your order with daily updates.</span>
+                  </li>
+                  <li class="flex gap-2 items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#004d2f]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Access a clear breakdown of your service fees for full transparency.</span>
+                  </li>
+                  <li class="flex gap-2 items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#004d2f]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Customize your service package to fit your unique business needs.</span>
+                  </li>
+                </ul>
+              </div>
+              <!-- Image -->
+              <div class="image md:w-1/2 flex justify-center items-center">
+                <img src="https://framerusercontent.com/images/FODR9qcBbAhBb7Tz4PIylQtfhE.jpg?scale-down-to=1024" alt="Client Dashboard" class="rounded-xl w-full h-full object-contain">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Partner logos Sections  -->
+    <section class="py-8">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-center justify-items-center">
+          <div class="w-full text-center bg-gray-200 p-4 rounded-lg shadow-md">
+            <img 
+              src="https://framerusercontent.com/images/mR3kcIFpk8dAwjLFI4PvTqGYIcg.png" 
+              alt="MILLICOM Logo" 
+              class="w-full h-auto max-w-[150px] mx-auto object-contain"
+            />
+          </div>
+          <div class="w-full text-center bg-gray-200 p-4 rounded-lg shadow-md">
+            <img 
+              src="https://framerusercontent.com/images/psaDthtmbfqWdyN96M5SYWRhigM.png" 
+              alt="MOREST Logo" 
+              class="w-full h-auto max-w-[150px] mx-auto object-contain"
+            />
+          </div>
+          <div class="w-full text-center bg-gray-200 p-4 rounded-lg shadow-md">
+            <img 
+              src="https://framerusercontent.com/images/CG3ldchA1ztNyrm0wVeL2sfyxU8.png" 
+              alt="NAKISA Logo" 
+              class="w-full h-auto max-w-[150px] mx-auto object-contain"
+            />
+          </div>
+          <div class="w-full text-center bg-gray-200 p-4 rounded-lg shadow-md">
+            <img 
+              src="https://framerusercontent.com/images/2DB0YeLfqqt3gpGRcYoqmJTfBU.png" 
+              alt="EMPORATIC Logo" 
+              class="w-full h-auto max-w-[150px] mx-auto object-contain"
+            />
+          </div>  
+          <div class="w-full text-center bg-gray-200 p-4 rounded-lg shadow-md">
+            <img 
+              src="https://framerusercontent.com/images/Uwu0jZeT6gyn0ZwsXBPYGwwemQ.png" 
+              alt="SAVVY Logo" 
+              class="w-full h-auto max-w-[150px] mx-auto object-contain"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- core -->
+    <section class="bg-[#004d2f] py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-white text-center mb-12 max-w-3xl mx-auto">
+          Building the Foundation of Your Business with Core Values
+        </h2>
+    
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Core Value 1: Security First -->
+          <div class="bg-white p-6 rounded-lg shadow-md space-y-4 text-center">
+            <div class="w-12 h-12 bg-[#d1ff96] rounded-lg flex items-center justify-center text-center mx-auto">
+              <!-- Security First Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#004d2f]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 2C8.13 2 5 5.13 5 9v6c0 3.87 3.13 7 7 7s7-3.13 7-7V9c0-3.87-3.13-7-7-7zM9 9c0-1.66 1.34-3 3-3s3 1.34 3 3v6c0 1.66-1.34 3-3 3s-3-1.34-3-3V9z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold">Security First</h3>
+            <p class="text-gray-600">
+              Your Business, Your Privacy We ensure your personal and business data is handled with the utmost care, offering secure solutions to protect your confidential information.
+            </p>
+          </div>
+    
+          <!-- Core Value 2: Reliability -->
+          <div class="bg-white p-6 rounded-lg shadow-md space-y-4 text-center">
+            <div class="w-12 h-12 bg-[#d1ff96] rounded-lg flex items-center justify-center text-center mx-auto">
+              <!-- Reliability Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#004d2f]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8V4m0 0L16 8m-4-4L8 8m3 12h.01m1.99 0h.01m-3-2v-6m0 0L16 9M9 9l-4 4" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold">Reliability</h3>
+            <p class="text-gray-600">
+              Dependable Every Step of the Way Count on us to provide consistent support, accurate filings, and timely updates throughout your business formation journey.
+            </p>
+          </div>
+    
+          <!-- Core Value 3: Customer-Centric -->
+          <div class="bg-white p-6 rounded-lg shadow-md space-y-4 text-center">
+            <div class="w-12 h-12 bg-[#d1ff96] rounded-lg flex items-center justify-center text-center mx-auto">
+              <!-- Customer-Centric Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#004d2f]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 7l4 4-4 4m16-8l-4 4 4 4" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold">Customer-Centric</h3>
+            <p class="text-gray-600">
+              Focused on Your Success Our services are designed with your goals in mind. We listen, adapt, and deliver tailored solutions to meet your business needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ- Section -->
+    <section class="py-16 max-w-7xl mx-auto px-4 w-full">
+      <h2 class="text-4xl font-bold text-center mb-12">
+        See Common Question and Answer
+      </h2>
+      <div class="grid md:grid-cols-2 gap-6 mb-16">
+        <div class="space-y-4">
+          <div class="accordion" id="faqAccordion1">
+            <!-- FAQ 1 -->
+            <div class="accordion-item mb-4 border border-green-600 rounded-lg overflow-hidden">
+              <h2 class="accordion-header" id="faqHeading1">
+                <button class="accordion-button text-left bg-gray-100 py-4 px-6 flex items-center justify-between w-full" type="button" aria-expanded="false" aria-controls="faqCollapse1">
+                  <span>What is an LLC?</span>
+                  <span class="plus-icon text-white font-bold bg-green-600 rounded-full w-8 h-8 flex items-center justify-center">+</span>
+                </button>
+              </h2>
+              <div id="faqCollapse1" class="accordion-collapse hidden px-6 py-4">
+                <div class="accordion-body">
+                  An LLC (Limited Liability Company) is a business structure that combines the pass-through taxation of a partnership or sole proprietorship with the limited liability of a corporation.
+                </div>
+              </div>
+            </div>
+            <!-- FAQ 2 -->
+            <div class="accordion-item mb-4 border border-green-600 rounded-lg overflow-hidden">
+              <h2 class="accordion-header" id="faqHeading2">
+                <button class="accordion-button text-left bg-gray-100 py-4 px-6 flex items-center justify-between w-full" type="button" aria-expanded="false" aria-controls="faqCollapse2">
+                  <span>Why should I choose an LLC?</span>
+                  <span class="plus-icon text-white font-bold bg-green-600 rounded-full w-8 h-8 flex items-center justify-center">+</span>
+                </button>
+              </h2>
+              <div id="faqCollapse2" class="accordion-collapse hidden px-6 py-4">
+                <div class="accordion-body">
+                  LLCs offer personal asset protection, tax flexibility, and less paperwork compared to corporations while maintaining professional credibility.
+                </div>
+              </div>
+            </div>
+            <!-- FAQ 3 -->
+            <div class="accordion-item mb-4 border border-green-600 rounded-lg overflow-hidden">
+              <h2 class="accordion-header" id="faqHeading3">
+                <button class="accordion-button text-left bg-gray-100 py-4 px-6 flex items-center justify-between w-full" type="button" aria-expanded="false" aria-controls="faqCollapse3">
+                  <span>What are the basic steps to register an LLC?</span>
+                  <span class="plus-icon text-white font-bold bg-green-600 rounded-full w-8 h-8 flex items-center justify-center">+</span>
+                </button>
+              </h2>
+              <div id="faqCollapse3" class="accordion-collapse hidden px-6 py-4">
+                <div class="accordion-body">
+                  The basic steps include choosing a business name, appointing a registered agent, filing articles of organization, and creating an operating agreement.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Accordion for Remaining FAQs -->
+        <div class="space-y-4">
+          <div class="accordion" id="faqAccordion2">
+            <!-- FAQ 4 -->
+            <div class="accordion-item mb-4 border border-green-600 rounded-lg overflow-hidden">
+              <h2 class="accordion-header" id="faqHeading4">
+                <button class="accordion-button text-left bg-gray-100 py-4 px-6 flex items-center justify-between w-full" type="button" aria-expanded="false" aria-controls="faqCollapse4">
+                  <span>How long does LLC registration take?</span>
+                  <span class="plus-icon text-white font-bold bg-green-600 rounded-full w-8 h-8 flex items-center justify-center">+</span>
+                </button>
+              </h2>
+              <div id="faqCollapse4" class="accordion-collapse hidden px-6 py-4">
+                <div class="accordion-body">
+                  The processing time varies by state, typically ranging from 1-3 weeks. Expedited service is available in most states.
+                </div>
+              </div>
+            </div>
+            <!-- FAQ 5 -->
+            <div class="accordion-item mb-4 border border-green-600 rounded-lg overflow-hidden">
+              <h2 class="accordion-header" id="faqHeading5">
+                <button class="accordion-button text-left bg-gray-100 py-4 px-6 flex items-center justify-between w-full" type="button" aria-expanded="false" aria-controls="faqCollapse5">
+                  <span>What is a registered agent?</span>
+                  <span class="plus-icon text-white font-bold bg-green-600 rounded-full w-8 h-8 flex items-center justify-center">+</span>
+                </button>
+              </h2>
+              <div id="faqCollapse5" class="accordion-collapse hidden px-6 py-4">
+                <div class="accordion-body">
+                  A registered agent is a person or entity designated to receive legal documents and official correspondence on behalf of your LLC.
+                </div>
+              </div>
+            </div>
+            <!-- FAQ 6 -->
+            <div class="accordion-item mb-4 border border-green-600 rounded-lg overflow-hidden">
+              <h2 class="accordion-header" id="faqHeading6">
+                <button class="accordion-button text-left bg-gray-100 py-4 px-6 flex items-center justify-between w-full" type="button" aria-expanded="false" aria-controls="faqCollapse6">
+                  <span>Is an Operating Agreement required?</span>
+                  <span class="plus-icon text-white font-bold bg-green-600 rounded-full w-8 h-8 flex items-center justify-center">+</span>
+                </button>
+              </h2>
+              <div id="faqCollapse6" class="accordion-collapse hidden px-6 py-4">
+                <div class="accordion-body">
+                  While not required in all states, an Operating Agreement is highly recommended to outline ownership and operating procedures.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Image -->
+        <div class="w-[90%] h-[600px] bg-[#FFE4CC] rounded-3xl overflow-hidden">
+          <img src="https://framerusercontent.com/images/0rXsrgUyLJJcTDf7VwTDpfLBU.png"
+            alt="Team collaboration"
+            class="rounded-lg object-cover w-full h-full" />
+        </div>
+    
+        <!-- Why Choose Us Section -->
+        <div>
+          <h2 class="text-3xl font-bold mb-4">
+            Why Choose Us for Your LLC Formation?
+          </h2>
+          <p class="text-gray-600 mb-8">
+            Streamline HR processes and empower your team with our products. Facilitate managing employee data.
+          </p>
+          <div class="space-y-6">
+            <!-- Fast & Reliable Filing -->
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <div class="text-sm text-gray-500 mb-2">01</div>
+              <h3 class="font-semibold mb-2">Fast & Reliable Filing</h3>
+              <p class="text-gray-600">
+                Get your LLC registered quickly with 100% accuracy.
+              </p>
+            </div>
+    
+            <!-- State Compliance Made Easy -->
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <div class="text-sm text-gray-500 mb-2">02</div>
+              <h3 class="font-semibold mb-2">State Compliance Made Easy</h3>
+              <p class="text-gray-600">
+                We handle all state-specific requirements and ongoing compliance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Testimonial  -->
+    <section class="py-16">
+      <div class="w-full max-w-6xl mx-auto px-4">
+        <div class="relative bg-[#d6ff99] rounded-3xl p-8 md:p-16">
+          <div class="swiper mySwiper flex items-center justify-center">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide flex flex-col items-center text-center space-y-6">
+                <img
+                  src="https://framerusercontent.com/images/mR3kcIFpk8dAwjLFI4PvTqGYIcg.png"
+                  alt="MILLICOM Logo"
+                  class="h-20 w-20 md:h-24 md:w-24 object-contain mx-auto"
+                />
+                <p class="text-lg md:text-xl max-w-2xl leading-relaxed mx-auto">
+                  "I didn't expect such an easy process. They made sure all the
+                  details were taken care of, and I could focus on growing my
+                  business."
+                </p>
+              </div>
+              <div class="swiper-slide flex flex-col items-center text-center space-y-6">
+                <img
+                  src="https://framerusercontent.com/images/psaDthtmbfqWdyN96M5SYWRhigM.png"
+                  alt="ACME CORP Logo"
+                  class="h-20 w-20 md:h-24 md:w-24 object-contain mx-auto"
+                />
+                <p class="text-lg md:text-xl max-w-2xl leading-relaxed mx-auto">
+                  "The team went above and beyond our expectations. Their attention
+                  to detail and commitment to excellence is unmatched."
+                </p>
+              </div>
+              <div class="swiper-slide flex flex-col items-center text-center space-y-6">
+                <img
+                  src="https://framerusercontent.com/images/Uwu0jZeT6gyn0ZwsXBPYGwwemQ.png"
+                  alt="GLOBEX Logo"
+                  class="h-20 w-20 md:h-24 md:w-24 object-contain mx-auto"
+                />
+                <p class="text-lg md:text-xl max-w-2xl leading-relaxed mx-auto">
+                  "Working with them transformed our business operations. The
+                  results speak for themselves."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Buttons -->
+          <div class="absolute left-8 top-1/2 -translate-y-1/2">
+            <button
+              class="p-5 rounded-full bg-black hover:bg-black/90 transition-all"
+              aria-label="Previous testimonial"
+            >
+              <i class="fa-solid fa-arrow-left text-white text-lg"></i>
+            </button>
+          </div>
+          <div class="absolute right-8 top-1/2 -translate-y-1/2">
+            <button
+              class="p-5 rounded-full bg-black hover:bg-black/90 transition-all"
+              aria-label="Next testimonial"
+            >
+              <i class="fa-solid fa-arrow-right text-white text-lg"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- price - table  -->
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">
+          Choose a Plan That Fits Your Business Needs
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="p-6 bg-white shadow-lg rounded-lg">
+          <div class="bg-[#004d2f] text-white p-4 rounded-md">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="p-2 bg-[#CFFF92] rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 17l-5 3 1.9-6.2L3 9.5l6.4-.5L12 3l2.6 6 6.4.5-4.8 4.3L17 20z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-white">Basic</h3>
+            </div>
+            <p class="mb-2 text-white">Standard Filing Time</p>
+            <hr class="text-white"/>
+            <div class="text-3xl font-bold mb-6 ">
+              $0
+              <span class="text-sm font-normal text-white"> + state filing fee</span>
+            </div>
+          </div>
+            <div class="space-y-4 mb-8 flex-grow">
+              <div class="flex items-start gap-2 mt-4">
+                <svg class="h-5 w-5 text-[#004d2f] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-sm">Formation Filings</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <svg class="h-5 w-5 text-[#004d2f] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-sm">Custom organizational minutes</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <svg class="h-5 w-5 text-[#004d2f] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-sm">Custom digital LLC kit</span>
+              </div>
+
+              <div class="flex items-start gap-2">
+                <svg class="h-5 w-5 text-[#004d2f] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-sm">Custom LLC operating agreement
+
+                </span>
+              </div>
+
+              <div class="flex items-start gap-2">
+                <svg class="h-5 w-5 text-[#004d2f] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-sm">Custom LLC banking resolution
+
+                </span>
+              </div>
+
+              <div class="flex items-start gap-2">
+                <svg class="h-5 w-5 text-[#004d2f] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                  <span class="text-sm">Access to 250+ customizable legal & business documents
+
+                  </span>
+              </div>
+              <div class="flex items-start gap-2">
+                <svg class="h-5 w-5 text-[#004d2f] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-sm">Trademark for your name, logo, or slogan
+
+                </span>
+              </div>
+
+              <div class="flex items-start gap-2">
+                <svg class="h-5 w-5 text-[#004d2f] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-sm">Business registration
+
+                </span>
+              </div>
+
+              <div class="flex items-start gap-2">
+                <svg class="h-5 w-5 text-[#004d2f] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-sm">Tax Strategy Session
+
+                </span>
+              </div>
+
+              <div class="flex items-start gap-2">
+                <svg class="h-5 w-5 text-[#004d2f] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                  <span class="text-sm">Rocket Tax™              </span>
+              </div>
+              <!-- Add other features in the same format -->
+            </div>
+            <button class="w-full bg-black text-white py-2 rounded-full hover:bg-gray-800">
+              Get Started
+            </button>
+          </div>
+          <div class="p-6 bg-gray-100 shadow-lg rounded-lg">
+            <div class="bg-[#cfff92] text-white p-4 rounded-md">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="p-4 bg-[#004d2f] rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8l-4 4h8l-4-4zm0 8l4-4H8l4 4z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-[#004d2f]">Premium</h3>
+            </div>
+            <p class="text-gray-600 mb-2">Faster Filing Time</p>
+            <hr class="text-white">
+            <div class="text-3xl mb-6 text-[#004d2f] font-semibold">
+              $89
+              <span class="text-sm font-normal text-gray-600"> + state filing fee</span>
+            </div>
+            </div>
+            <div class="space-y-4 mb-8 mt-4">
+              <div class="flex items-start gap-2 ">
+                <svg class="h-5 w-5 text-[#004d2f] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-sm">EIN</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <svg class="h-5 w-5 text-[#004d2f] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-sm">Custom organizational minutes</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <svg class="h-5 w-5 text-[#004d2f] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-sm">Custom digital LLC kit</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <svg class="h-5 w-5 text-[#004d2f] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-sm">Custom LLC operating agreement</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <svg class="h-5 w-5 text-[#004d2f] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-sm">Beneficial Ownership Information (BOI)</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <svg class="h-5 w-5 text-[#004d2f] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-sm">Custom LLC banking resolution
+                </span>
+              </div>
+              <div class="flex items-start gap-2">
+                <svg class="h-5 w-5 text-[#004d2f] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-sm">Express processing</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <svg class="h-5 w-5 text-[#004d2f] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-sm">Access to 250+ customizable legal & business documents</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <svg class="h-5 w-5 text-[#004d2f] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-sm">Trademark for your name, logo, or slogan</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <svg class="h-5 w-5 text-[#004d2f] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-sm">Registered Agent</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <svg class="h-5 w-5 text-[#004d2f] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-sm">Tax Strategy Session</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <svg class="h-5 w-5 text-[#004d2f] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-sm">Rocket Tax™</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <svg class="h-5 w-5 text-[#004d2f] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-sm">One year access to eSignature</span>
+              </div>
+              <!-- Add other features in the same format -->
+            </div>
+            <button class="w-full bg-[#004d2f] text-white py-2 rounded-full hover:bg-[#003d26]">
+              Get Started
+            </button>
+          </div>
+          <div class="p-6 bg-white shadow-lg rounded-lg">
+            <div class="bg-[#004d2f] p-4 rounded-lg text-white">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="p-2 bg-[#004d2f] rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M9 21h6m-3-11v8" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold">Business</h3>
+            </div>
+            <p class="text-white mb-2">Priority Filing Service</p>
+            <hr class="text-whites">
+            <div class="text-3xl font-bold mb-6">
+              $189
+              <span class="text-sm font-normal text-white"> + state filing fee</span>
+            </div>
+            </div>
+            <div class="space-y-4 mb-8">
+              <div class="flex items-start gap-2">
+                <svg class="h-5 w-5 text-[#004d2f] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-sm">IRS Tax Filings</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <svg class="h-5 w-5 text-[#004d2f] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-sm">Same-day processing</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <svg class="h-5 w-5 text-[#004d2f] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-sm">Professional business address & virtual mailbox</span>
+              </div>
+            </div>
+            <button class="w-full bg-black text-white py-2 rounded-full hover:bg-gray-800">
+              Get Started
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact section -->
+    <section class="max-w-7xl mx-auto px-4 py-16">
+      <h2 class="text-4xl font-bold mb-16">
+        Contact Us for Professional Support and Help
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="relative rounded-2xl overflow-hidden">
+          <img
+            src="https://framerusercontent.com/images/CRzG7f2HtMWx45CdCrxx2cOKIt4.png?scale-down-to=1024"
+            alt="Support Team Member"
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white">
+            <p class="text-sm mb-2">
+              Accuflier simplifies legal compliance and keeps us on track effortlessly.
+            </p>
+            <p class="font-semibold">Small Business Team</p>
+            <p class="text-sm text-gray-300">Compliance Department</p>
+          </div>
+        </div>
+        <div class="p-8 bg-gray-50 rounded-lg shadow">
+          <div class="flex items-center gap-2 mb-6">
+            <div class="w-6 h-6 rounded-full bg-[#004d2f] flex items-center justify-center">
+              <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <span class="text-sm text-gray-600">Connect with Us</span>
+          </div>
+
+          <h3 class="text-2xl font-bold mb-4">Get in Touch for Your LLC Needs</h3>
+          <p class="text-gray-600 mb-8">
+            Have questions about forming your LLC? Our team is here to provide expert advice and support—let's get started.
+          </p>
+
+          <form class="space-y-6">
+            <div>
+              <label for="fullName" class="block text-sm font-medium text-gray-700 mb-2">
+                Full Name
+              </label>
+              <input
+                id="fullName"
+                type="text"
+                placeholder="John Doe"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#004d2f]"
+              />
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                Email Address
+              </label>
+              <input
+                id="email"
+                type="email"
+                placeholder="Enter your mail"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#004d2f]"
+              />
+            </div>
+
+            <div>
+              <label for="company" class="block text-sm font-medium text-gray-700 mb-2">
+                Company Name (Optional)
+              </label>
+              <input
+                id="company"
+                type="text"
+                placeholder="Your business name"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#004d2f]"
+              />
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
+                Message
+              </label>
+              <textarea
+                id="message"
+                placeholder="How can we help you today?"
+                rows="4"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#004d2f]"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full py-2 bg-[#004d2f] text-white rounded-lg hover:bg-[#003d26] transition duration-200"
+            >
+              Send Your Inquiry
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="max-w-7xl mx-auto px-4 py-16">
+      <h2 class="text-4xl font-bold mb-16">
+        Latest Insights and Tips for Entrepreneurs
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <article class="group cursor-pointer">
+          <div class="mb-4 rounded-xl overflow-hidden">
+            <img
+              src="https://framerusercontent.com/images/i8Q8WrcRJ299DmLHKl9Dp547jsg.jpg?scale-down-to=512"
+              alt="5 Common Mistakes to Avoid When Forming an LLC"
+              class="w-full h-48 object-cover transition-transform group-hover:scale-105"
+            />
+          </div>
+          <h3 class="text-xl font-bold mb-2 group-hover:text-[#004d2f]">
+            5 Common Mistakes to Avoid When Forming an LLC
+          </h3>
+          <p class="text-gray-600 text-sm">
+            Support for various content types such as articles, blogs, videos, and more. Rich text editor with formatting options for enhanced.
+          </p>
+        </article>
+        <article class="group cursor-pointer">
+          <div class="mb-4 rounded-xl overflow-hidden">
+            <img
+              src="https://framerusercontent.com/images/HGKNFloK2GNbiJJ3vwdTDahRdvk.jpg?scale-down-to=512"
+              alt="The Benefits of an LLC: Why It's the Best Business Structure"
+              class="w-full h-48 object-cover transition-transform group-hover:scale-105"
+            />
+          </div>
+          <h3 class="text-xl font-bold mb-2 group-hover:text-[#004d2f]">
+            The Benefits of an LLC: Why It's the Best Business Structure
+          </h3>
+          <p class="text-gray-600 text-sm">
+            Support for various content types such as articles, blogs, videos, and more. Rich text editor with formatting options for enhanced.
+          </p>
+        </article>
+
+        <article class="group cursor-pointer">
+          <div class="mb-4 rounded-xl overflow-hidden">
+            <img
+              src="https://framerusercontent.com/images/iqFeS9Bi9lOQpNrA6cEV0lXyyE.jpg?scale-down-to=512"
+              alt="Step-by-Step Guide to Registering Your LLC"
+              class="w-full h-48 object-cover transition-transform group-hover:scale-105"
+            />
+          </div>
+          <h3 class="text-xl font-bold mb-2 group-hover:text-[#004d2f]">
+            Step-by-Step Guide to Registering Your LLC
+          </h3>
+          <p class="text-gray-600 text-sm">
+            Support for various content types such as articles, blogs, videos, and more. Rich text editor with formatting options for enhanced.
+          </p>
+        </article>
+      </div>
+
+      <div class="text-center">
+        <button class="bg-[#004d2f] hover:bg-[#003d26] text-white px-6 py-2 rounded-lg inline-flex items-center gap-2">
+          View All Blogs
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+    </section>
+    <!-- cta-sections -->
+    <section class="pt-16 cat-section">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="bg-[#004d2f] rounded-3xl p-8 md:p-16">
+          <div class="grid md:grid-cols-2 gap-12">
+            <div class="text-white">
+              <div class="flex items-center gap-2 mb-6">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none">
+                  <rect width="24" height="24" rx="12" fill="white" fill-opacity="0.1" />
+                  <path d="M17 9L9.5 16.5L7 14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span class="text-sm font-medium text-white/80">EVERYTHING YOU NEED. ALL IN ONE PLACE.</span>
+              </div>
+
+              <h2 class="text-4xl font-bold mb-4">
+                Everything You Need to Launch Your Business
+              </h2>
+              <p class="mb-8 text-white/80">
+                Just $0 + State Fee to Get Started Today
+              </p>
+              <button class="bg-white text-[#004d2f] hover:bg-gray-100 px-6 py-2 rounded-lg flex items-center gap-2">
+                Get Started Today
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-white rounded-lg p-6">
+                <div class="space-y-2">
+                  <div class="text-4xl font-bold">90%</div>
+                  <p class="text-sm text-gray-600">
+                    Streamlining Business Formation Process
+                  </p>
+                  <div class="mt-4">
+                    <svg class="w-full h-24" viewBox="0 0 200 100" fill="none">
+                      <path d="M0 80 Q 50 30, 100 70 T 200 40" stroke="#d1ff96" stroke-width="3" fill="none" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div class="bg-white rounded-lg p-6">
+                  <div class="space-y-4">
+                    <div class="flex justify-between items-start">
+                      <div class="font-bold">LLC Applications</div>
+                      <div class="text-xs text-gray-500">Filed 19 December 2024</div>
+                    </div>
+                    <div class="flex -space-x-2">
+                      <img src="/placeholder.svg?height=32&width=32" alt="" class="w-8 h-8 rounded-full border-2 border-white" />
+                      <img src="/placeholder.svg?height=32&width=32" alt="" class="w-8 h-8 rounded-full border-2 border-white" />
+                      <img src="/placeholder.svg?height=32&width=32" alt="" class="w-8 h-8 rounded-full border-2 border-white" />
+                      <img src="/placeholder.svg?height=32&width=32" alt="" class="w-8 h-8 rounded-full border-2 border-white" />
+                      <div class="w-8 h-8 rounded-full bg-[#d1ff96] border-2 border-white flex items-center justify-center text-xs font-medium">
+                        10+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-white rounded-lg p-6">
+                  <div class="space-y-2">
+                    <div class="text-3xl font-bold">2500+</div>
+                    <p class="text-sm text-gray-600">Startups Flying!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer  -->
+    <section class="bg-[#d1ff96]">
+      <div class="max-w-7xl mx-auto px-8 py-16">
+        <div class="grid md:grid-cols-12 gap-16">
+          <div class="md:col-span-6 space-y-8">
+            <p class="text-sm text-gray-600 max-w-2xl">
+              Accuflier is NOT a law firm and does NOT provide legal advice. Use of our services is governed by our Terms of Service and Privacy Policy. The information you provide is NOT protected by attorney-client privilege.
+            </p>
+            
+            <div class="space-y-2">
+              <p class="text-sm text-gray-600">+1 (307) 263-4053</p>
+              <p class="text-sm text-gray-600">info@accuflier.com</p>
+            </div>
+
+            <p class="text-sm text-gray-600">
+              © 2024 Accuflier | All Rights Reserved
+            </p>
+          </div>
+          <div class="md:col-span-6">
+            <div class="grid grid-cols-3 gap-8">
+              <div>
+                <h3 class="font-bold mb-4">Company</h3>
+                <ul class="space-y-3">
+                  <li>
+                    <a href="#" class="text-sm text-gray-600 hover:text-gray-900">
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-sm text-gray-600 hover:text-gray-900">
+                      Contact
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-sm text-gray-600 hover:text-gray-900">
+                      Press
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-bold mb-4">Support</h3>
+                <ul class="space-y-3">
+                  <li>
+                    <a href="#" class="text-sm text-gray-600 hover:text-gray-900">
+                      Order status
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-sm text-gray-600 hover:text-gray-900">
+                      Privacy Policy
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-sm text-gray-600 hover:text-gray-900">
+                      Terms & Condition
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-bold mb-4">Helpful Links</h3>
+                <ul class="space-y-3">
+                  <li>
+                    <a href="#" class="text-sm text-gray-600 hover:text-gray-900">
+                      FAQs
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-sm text-gray-600 hover:text-gray-900">
+                      How It Works
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-sm text-gray-600 hover:text-gray-900">
+                      Business Formation Forms
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/script.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      navigation: {
+        nextEl: '.swiper-next-button',
+        prevEl: '.swiper-prev-button',
+      },spaceBetween: 30,
+    autoplay: {
+      delay: 5000,
+    },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      loop: true,
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 40,
+        },
+      },
+    });
+  </script>  
+  </body>
+</html>
